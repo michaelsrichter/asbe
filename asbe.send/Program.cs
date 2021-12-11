@@ -38,6 +38,7 @@ while (true)
 
         await sender.SendMessageAsync(message);
     });
+    if (!asbeConfig.RunConstant) break;
     iteration++;
 }
 

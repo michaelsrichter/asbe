@@ -1,11 +1,16 @@
 {
   "profiles": {
     "asbe.send": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
     },
     "WSL": {
       "commandName": "WSL2",
-      "environmentVariables": {},
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
       "distributionName": ""
     },
     "Docker": {

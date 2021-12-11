@@ -13,5 +13,7 @@ namespace asbe.send
         public int ParallelDegrees { get; set; }
         public int Start { get; set; }
         public int End { get; set; }
+
+        public bool RunConstant { get; set; }
     }
 }

@@ -9,7 +9,5 @@ az servicebus namespace authorization-rule create --resource-group $RGNAME --nam
 az servicebus namespace authorization-rule keys list --resource-group $RGNAME --namespace-name $SERVICBUSNAME --name RootManageSharedAccessKey --query primaryConnectionString
 az servicebus queue create --resource-group $RGNAME --namespace-name $SERVICBUSNAME --name queue1
 
-az servicebus queue create --resource-group rg-asbe-31784 --namespace-name sb-asbe-31784 --name queue1
-
 
 
