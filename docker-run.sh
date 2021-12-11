@@ -3,6 +3,6 @@ docker run -d -t -i --name send$RANDOM \
 -e ASBEConfig__QueueName="queue1" \
 -e ASBEConfig__ParallelDegrees=-1 \
 -e ASBEConfig__Start=0 \
--e ASBEConfig__End=5 \
-asbesend:latest
+-e ASBECOnfig__RunConstant=true \
+ghcr.io/michaelsrichter/asbe:master
 

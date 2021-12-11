@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /asbe.send/appsettings.Development.json
+docker-run.sh
