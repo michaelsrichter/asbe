@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  asbe.send:
+    image: ${DOCKER_REGISTRY-}asbesend
+    build:
+      context: .
+      dockerfile: asbe.send/Dockerfile
