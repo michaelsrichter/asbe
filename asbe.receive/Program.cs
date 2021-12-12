@@ -2,13 +2,13 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Azure.Messaging.ServiceBus;
-using asbe.send;
 using System.Text;
+using asbe.receive;
 
 using IHost host = Host.CreateDefaultBuilder(args).Build();
 var config = host.Services.GetRequiredService<IConfiguration>();
 
-var asbeConfig = config.GetRequiredSection("ASBEConfig").Get<ASBEConfig>();
+var asbeReceiveConfig = config.GetRequiredSection("ASBEReceiveConfig").Get<ASBEReceiveConfig>();
 
 foreach (var item in config.AsEnumerable())
 {
@@ -16,7 +16,7 @@ foreach (var item in config.AsEnumerable())
 }
 
 string hostName = config["HOSTNAME"];
-var client = new ServiceBusClient(asbeConfig.SBConnectionString);
+var client = new ServiceBusClient(asbeReceiveConfig.SBConnectionString);
 
 
 
@@ -29,11 +29,13 @@ var options = new ServiceBusProcessorOptions
     AutoCompleteMessages = false,
 
     // I can also allow for multi-threading
-    MaxConcurrentCalls = 10,
+    MaxConcurrentCalls = asbeReceiveConfig.MaxConcurrentCalls,
+    PrefetchCount = asbeReceiveConfig.PrefetchCount
+
 };
 
 // create a processor that we can use to process the messages
-await using ServiceBusProcessor processor = client.CreateProcessor(asbeConfig.QueueName, options);
+await using ServiceBusProcessor processor = client.CreateProcessor(asbeReceiveConfig.QueueName, options);
 
 // configure the message and error handler to use
 processor.ProcessMessageAsync += MessageHandler;
