@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /asbe.send/appsettings.Development.json
 docker-run.sh
+/asbe.receive/appsettings.Development.json

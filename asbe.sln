@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asbe.send", "asbe.send\asbe
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2703379A-042D-4F44-888B-2B7F6548277F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asbe.receive", "asbe.receive\asbe.receive.csproj", "{2E15293F-B408-423D-B5F8-895BB418E0FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2703379A-042D-4F44-888B-2B7F6548277F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2703379A-042D-4F44-888B-2B7F6548277F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2703379A-042D-4F44-888B-2B7F6548277F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E15293F-B408-423D-B5F8-895BB418E0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E15293F-B408-423D-B5F8-895BB418E0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E15293F-B408-423D-B5F8-895BB418E0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E15293F-B408-423D-B5F8-895BB418E0FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

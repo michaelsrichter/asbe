@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "asbe.receive": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "distributionName": ""
+    },
+    "Docker (1)": {
+      "commandName": "Docker"
+    }
+  }
+}
