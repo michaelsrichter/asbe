@@ -2,12 +2,14 @@
   "profiles": {
     "asbe.send": {
       "commandName": "Project",
+      "dotnetRunMessages": true,
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
       }
     },
     "WSL": {
       "commandName": "WSL2",
+      "dotnetRunMessages": true,
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
       },
